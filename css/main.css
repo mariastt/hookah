@@ -17,6 +17,14 @@
     font-family: 'MontserratRegular';
     src: url("../fonts/MontserratRegular.ttf");
 }
+@font-face {
+    font-family: 'PantonRegular';
+    src: url("../fonts/PantonRegular.ttf");
+}
+@font-face {
+    font-family: 'PantonBold';
+    src: url("../fonts/PantonBold.ttf");
+}
 
 body {
     margin: 0;
@@ -28,7 +36,8 @@ body {
 
 #main {
     background-image: url("../images/house-bg.png");
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
 }
 
 
@@ -37,12 +46,18 @@ body {
     max-width: 1140px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 30px 0;
+    align-items: flex-end;
+    padding: 25px 15px;
+    box-sizing: border-box;
 }
 
 .logo {
-    position: relative;
+    height: 63px;
+    opacity: 0.8;
+}
+
+#header-container #cross, #work-time-burger, #phone-burger {
+    display: none;
 }
 
 .logo-text {
@@ -66,34 +81,49 @@ body {
     display: flex;
     justify-content: space-between;
     margin: 0 70px;
+    margin-bottom: 24px;
 }
 
 #header-menu a {
     text-decoration: none;
     color: rgb(255, 255, 255);
+    letter-spacing: 0.5px;
+    opacity: 0.8;
 }
 
 #work-time-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    opacity: 0.8;
+    letter-spacing: 0.2px;
 }
 
 #work-time-container img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     margin-right: 7px;
+    margin-top: 3px;
 }
+
 
 .work-time {
     width: 130px;
+    line-height: 1.333;
 }
 
 .phone-container {
     display: flex;
+    text-decoration: none;
+    align-items: flex-end;
+    margin-bottom: 3px;
+    letter-spacing: 0.2px;
 }
+
 
 .phone-container .phone {
     width: 130px;
+    color: white;
+    opacity: 0.8;
 }
 
 
@@ -107,12 +137,13 @@ body {
     max-width: 1140px;
     margin: 0 auto;
     display: flex;
-    padding-top: 30px;
+    padding: 30px 15px 0 15px;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
 
 #main-info {
     width: 440px;
-    margin-right: 210px;
 }
 
 #main-info h2 {
@@ -120,22 +151,25 @@ body {
     font-family: "PantonExtraBold", sans-serif;
     line-height: 1.389;
     letter-spacing: 1px;
-    margin: 85px 0 0 0;
+    margin: 79px 0 0 0;
 }
 
 #main-info #main-text {
     margin-top: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 39px;
     line-height: 1.333;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
 }
 
 .order-btn {
     background-color: rgb(98, 36, 223);
-    padding: 16px 36px;
+    padding: 16px 39px;
     font-family: "MontserratMedium", sans-serif;
     color: rgb(255, 255, 255);
     margin-bottom: 180px;
     border: none;
+    letter-spacing: 0.7px;
 }
 
 .order-btn:hover {
@@ -147,118 +181,63 @@ body {
 
 #main-image {
     position: relative;
-    /*width: 560px;*/
-    /*height: 515px;*/
-}
-
-#main-image #copy-hookah {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    z-index: -1;
-}
-
-#main-image #smoke-sides {
-    position: absolute;
-    bottom: 106px;
-    left: -62px;
-}
-
-#main-image #smoke-center {
-    position: absolute;
-    bottom: 106px;
-    left: 27px;
+    margin-right: 170px;
 }
 
 #main-image #coals {
     position: absolute;
-    top: -12px;
-    left: 90px;
+    top: -3px;
+    left: 138px;
 }
 
 #main-image #coals-shadow {
     position: absolute;
-    top: -42px;
-    left: 76px;
+    top: -32px;
+    left: 125px;
 }
 
 #main-image #coals-smoke {
     position: absolute;
-    top: -28px;
-    left: 95px;
+    top: -23px;
+    left: 139px;
 }
 
 #main-image #sparks {
     position: absolute;
-    bottom: 129px;
-    left: 123px;
+    bottom: 88px;
+    left: 168px;
     z-index: -10;
 }
 
 #main-image #coal {
     position: absolute;
-    bottom: 305px;
-    left: 353px;
+    bottom: 263px;
+    left: 398px;
 }
 
 #main-image #coal-shadow {
     position: absolute;
-    bottom: 333px;
-    left: 365px;
+    bottom: 291px;
+    left: 411px;
     z-index: -5;
 }
 
 #main-image #coal-smoke {
     position: absolute;
-    bottom: 286px;
-    left: 275px;
+    bottom: 245px;
+    left: 321px;
     z-index: -7;
 }
 
-#main-image #sale div {
-    border-width: 1px;
-    border-color: rgb(255, 255, 255);
-    border-style: dashed;
-    border-radius: 50%;
-    position: absolute;
-    left: 5px;
-    top: 5px;
-    width: 123px;
-    height: 123px;
-    z-index: 51;
-}
-
-#main-image #sale div span {
-    font-size: 14px;
-    font-family: "PantonExtraBold", sans-serif;
-    line-height: 1.286;
-    text-align: center;
-    position: absolute;
-    top: 43px;
-    left: 17px;
-}
-
 #main-image #sale {
-    border-radius: 50%;
-    background-color: rgb(7, 0, 21);
     position: absolute;
-    left: -65px;
     top: 132px;
-    width: 135px;
-    height: 135px;
-    z-index: 50;
-    box-shadow: 0px 0px 16px 1px rgba(158, 108, 228, 0.4);
-    -webkit-box-shadow: 0px 0px 16px 1px rgba(158, 108, 228, 0.4);
-    -moz-box-shadow: 0px 0px 16px 1px rgba(158, 108, 228, 0.4);
+    left: -32px;
 }
 
-#blue-bg {
-    /*background-image: url("../images/blue-bg.png");*/
-}
 
 #info {
-    padding: 120px 20px 150px 20px;
+    padding: 120px 15px 150px 15px;
     max-width: 1140px;
     margin: 0 auto;
     display: grid;
@@ -266,6 +245,7 @@ body {
     grid-template-rows: repeat(4, 95px);
     grid-gap: 60px;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 .border {
@@ -307,6 +287,10 @@ body {
     justify-content: space-between;
 }
 
+#info .vip-rooms-text {
+    letter-spacing: 0.3px;
+}
+
 #info .vip-rooms img {
     width: 174px;
     height: 174px;
@@ -314,10 +298,13 @@ body {
 
 #info .vip-rooms-text div {
     width: 224px;
+    line-height: 1.333;
 }
 
 #info .best-tastes-text {
-    width: 202px;
+    width: 209px;
+    line-height: 1.333;
+    letter-spacing: 0.3px;
 }
 
 #info .and {
@@ -339,34 +326,40 @@ body {
 }
 
 #info .saturday-party-text {
-    margin-bottom: 42px;
+    margin-bottom: 39px;
     width: 420px;
+    line-height: 1.333;
+    letter-spacing: 0.3px;
 }
 
 #info h3 {
     font-size: 20px;
     font-family: "PantonExtraBold", sans-serif;
     color: rgb(98, 36, 223);
-    margin: 0 0 17px 0;
+    margin: 0 0 14px 0;
 }
 
 #our-masters {
     max-width: 1140px;
     margin: 0 auto;
-    padding-top: 145px;
-    padding-bottom: 75px;
+    padding: 145px 15px 75px 15px;
+    box-sizing: border-box;
 }
 
 h4 {
     font-size: 30px;
     font-family: "PantonExtraBold", sans-serif;
     margin: 0;
+    letter-spacing: 1px;
+    /*padding-left: 10px;*/
 }
 
 #our-masters #our-masters-text {
     width: 340px;
     margin-top: 18px;
     margin-bottom: 57px;
+    letter-spacing: 0.5px;
+    line-height: 1.333;
 }
 
 .master .master-image {
@@ -388,14 +381,14 @@ h4 {
 }
 
 #our-masters .slick-prev {
-    top: 587px;
-    left: calc(50% - 61px);
+    top: 578px;
+    left: calc(50% - 68px);
 }
 
 
 #our-masters .slick-next {
-    top: 587px;
-    left: calc(50% + 23px);
+    top: 578px;
+    left: calc(50% + 4px);
 }
 
 .slick-next:hover, .slick-prev:hover {
@@ -415,7 +408,7 @@ h4 {
 
 #our-masters .master-info {
     margin-top: 9px;
-    padding: 30px;
+    padding: 27px;
     border-width: 1px;
     border-color: rgb(98, 36, 223);
     border-style: solid;
@@ -424,12 +417,11 @@ h4 {
     box-shadow: 0px 0px 16px 1px rgba(98, 36, 223, 0.3);
     -webkit-box-shadow: 0px 0px 16px 1px rgba(98, 36, 223, 0.3);
     -moz-box-shadow: 0px 0px 16px 1px rgba(98, 36, 223, 0.3);
+    letter-spacing: 0.3px;
 }
 
-#our-masters .masters-container {
-    /*display: flex;*/
-    /*justify-content: space-around;*/
-    /*margin-left: 30px;*/
+#our-masters .about-master {
+    line-height: 1.333;
 }
 
 #our-masters .master {
@@ -445,16 +437,15 @@ h4 {
 #our-masters .experience {
     font-size: 15px;
     color: rgb(148, 148, 148);
-    margin: 18px 0;
+    margin: 11px 0 18px 0;
 }
 
 
-
-
 #our-menu {
-    padding-top: 110px;
+    padding: 110px 15px 0 15px;
     max-width: 1140px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 #snacks-container, #tea-container, #bar-container {
@@ -463,11 +454,12 @@ h4 {
 
 #our-menu .category-container {
     display: flex;
-    margin-top: 25px;
+    margin-top: 30px;
+    letter-spacing: 0.3px;
 }
 
 #our-menu .category {
-    margin-right: 40px;
+    margin-right: 38px;
     line-height: 1.4;
 }
 
@@ -489,7 +481,7 @@ h4 {
 }
 
 #our-menu .product.border {
-    padding: 29px;
+    padding: 27px;
     border-width: 1px;
     border-color: rgb(98, 36, 223);
     border-style: solid;
@@ -520,17 +512,17 @@ h4 {
     font-size: 20px;
     font-family: "PantonExtraBold", sans-serif;
     color: rgb(98, 36, 223);
-    margin-bottom: 18px;
 }
 
 #our-menu .product-text p {
-    /*margin: 25px 0;*/
+    margin: 25px 0;
 }
+
+
 
 #our-menu .cost {
     font-size: 20px;
     font-family: "PantonExtraBold", sans-serif;
-    margin-top: 15px;
 }
 
 #our-menu .product-photo {
@@ -546,29 +538,35 @@ h4 {
 #discounts {
     max-width: 1140px;
     margin: 0 auto;
-    padding-top: 145px;
+    padding: 145px 15px 0 15px;
 }
 
 #discounts-text {
-    margin-top: 18px;
-    margin-bottom: 58px;
+    margin-top: 13px;
+    margin-bottom: 60px;
     width: 306px;
+    line-height: 1.333;
+    letter-spacing: 0.4px;
 }
 
 #discounts-container {
     display: flex;
     justify-content: space-between;
+    margin-right: 30px;
 }
 
 .discount-info {
     width: 348px;
-    margin-top: 20px;
+    margin-top: 13px;
+    line-height: 1.333;
+    letter-spacing: 0.3px;
 }
 
 #gallery {
     max-width: 1140px;
     margin: 0 auto;
-    padding-top: 125px;
+    padding: 125px 15px 0 15px;
+    box-sizing: border-box;
 }
 
 #gallery h4 {
@@ -608,7 +606,8 @@ h4 {
 
 #form-title {
     font-size: 20px;
-    font-family: "PantonExtraBold", sans-serif;
+    font-family: "PantonBold", sans-serif;
+    letter-spacing: 0.3px;
     text-align: center;
     margin-bottom: 35px;
 }
@@ -636,7 +635,7 @@ h4 {
     border-style: solid;
     background: transparent;
     outline: none;
-    padding: 13px;
+    padding: 11px;
     margin-bottom: 22px;
     box-sizing: border-box;
     color: rgb(255, 255, 255);
@@ -685,18 +684,24 @@ h4 {
     padding: 30px 100px;
     background-color: rgb(7, 0, 21);
     width: 570px;
-    height: 430px;
+    height: 367px;
     box-sizing: border-box;
     display: none;
-    align-items: center;
     text-align: center;
     font-size: 20px;
+}
+
+#booking #sent-from div {
+    height: 307px;
+    display: flex;
+    align-items: center;
 }
 
 #location {
     max-width: 1140px;
     margin: 0 auto;
-    padding: 150px 0 160px 0;
+    padding: 150px 15px 160px 15px;
+    box-sizing: border-box;
 }
 
 #location h4 {
@@ -719,10 +724,30 @@ h4 {
     font-size: 20px;
     font-family: "PantonExtraBold", sans-serif;
     color: rgb(98, 36, 223);
-    margin-bottom: 18px;
+    margin-bottom: 13px;
+    letter-spacing: 0.5px;
 }
 
-#social-media img {
+#location-info #address {
+    line-height: 1.333;
+    letter-spacing: 0.4px;
+}
+
+#location-info #work-time {
+    font-size: 14px;
+    line-height: 1.333;
+    letter-spacing: 0.4px;
+}
+
+#location-info #work-time p {
+    margin-top: 22px;
+}
+
+#social-media {
+    padding-top: 7px;
+}
+
+#social-media a {
     margin-right: 14px;
 }
 
@@ -733,7 +758,13 @@ h4 {
 #footer {
     max-width: 1140px;
     margin: 0 auto;
-    padding-bottom: 55px;
+    padding: 0 15px 55px 15px;
+    box-sizing: border-box;
+}
+
+#footer .phone-container {
+    align-items: center;
+    margin-bottom: 0;
 }
 
 #footer #footer-container {
@@ -745,6 +776,8 @@ h4 {
 #footer #footer-container .order-btn {
     margin-bottom: 0;
     margin-right: 40px;
+    letter-spacing: 0.7px;
+    padding: 16px 36px;
 }
 
 #right-block {
@@ -755,12 +788,13 @@ h4 {
 #rights {
     font-size: 13px;
     color: rgb(147, 147, 147);
-    margin-top: 27px;
+    margin-top: 22px;
 }
 
 #info1 {
     display: flex;
     justify-content: space-around;
+
 }
 
 #block1 {

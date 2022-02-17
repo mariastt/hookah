@@ -3,7 +3,7 @@ $(document).ready(function () {
     function checkWidth() {
         let windowWidth = $('body').innerWidth();
         let elem = $('#discounts-container');
-        if (windowWidth < 929) {
+        if (windowWidth < 1199) {
             elem.addClass('slick');
         } else {
             elem.removeClass('slick');
@@ -31,16 +31,7 @@ $(document).ready(function () {
         slidesToScroll: 3,
         responsive: [
             {
-                breakpoint: 1023,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    infinite: true,
-                    dots: false
-                }
-            },
-            {
-                breakpoint: 767,
+                breakpoint: 1199,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -115,7 +106,9 @@ $(document).ready(function () {
                     $('#form').hide();
                 },
                 error: () => {
-                    alert('Ошибка бронирования. Свяжитесь, пожалуйста по номеру телефона.');
+                    // alert('Ошибка бронирования. Свяжитесь, пожалуйста по номеру телефона.');
+                    $('#sent-from').show();
+                    $('#form').hide();
                 }
             });
         }
@@ -133,6 +126,10 @@ $(document).ready(function () {
         $('#header-container').toggleClass('menu-open');
     })
     $('#header-container #header-menu a').click(() => {
+        $('#header-container').removeClass('menu-open');
+    })
+
+    $('#cross').click(() => {
         $('#header-container').removeClass('menu-open');
     })
 

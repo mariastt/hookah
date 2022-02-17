@@ -4,79 +4,148 @@
     #info {
         grid-gap: 48px 30px;
     }
+
     #info .saturday-party-text {
         margin-bottom: 24px;
     }
+
     #header-menu {
         margin-right: 0;
     }
+
     #header-container {
         padding: 30px 20px;
     }
+
     #main-container {
         padding: 30px 20px 0 20px;
     }
+
     #main-info {
         margin-right: 65px;
     }
-    #our-masters {
-        padding: 145px 20px 75px 20px;
-    }
-    .master .master-image {
-        width: 300px;
-        height: 300px;
-    }
-    #our-masters .master-info {
-        width: 300px;
-        height: 210px;
-    }
+
     #our-masters .slick-next, #our-masters .slick-prev {
-        top: 571px;
+        display: none !important;
     }
+
+    .slick-dots .slick-active {
+        border-radius: 50%;
+        background-color: rgb(99, 37, 221);
+        width: 14px;
+        height: 14px;
+    }
+
+    .slick-dots li {
+        border-width: 1px;
+        border-color: rgb(99, 37, 221);
+        border-style: solid;
+        border-radius: 50%;
+        width: 13px;
+        height: 13px;
+        margin-top: 35px;
+    }
+
+    #our-masters {
+        max-width: 400px;
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    #our-masters, .slick-dots {
+        bottom: -52px;
+    }
+    #our-masters #our-masters-text {
+        margin: 18px auto 57px auto;
+    }
+
     #our-menu {
         padding: 90px 20px 0 20px;
     }
+
     #our-menu .product {
         width: 460px;
         height: 275px;
     }
+
     #our-menu .product-info {
         width: 280px;
     }
+
     #our-menu .product-flex {
-        justify-content: space-around;
+        justify-content: flex-start;
     }
-    #discounts {
-        padding: 90px 20px 0 20px;
-    }
-    .discount-item, .discount-image img, .discount-info {
-        width: 290px;
+    #our-menu .product.border {
+        margin-right: 57px;
     }
     #discounts-container {
-        justify-content: space-around;
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    #discounts {
+        text-align: center;
+    }
+    #discounts-text {
+        margin: 13px auto 60px auto;
+    }
+
+    .discount-item, .discount-image img, .discount-info {
+        width: 400px;
+    }
+
+    #discounts-container .slick-next, #discounts-container .slick-prev  {
+        display: none !important;
+    }
+
+    #discounts-container .slick-active {
+        border-radius: 50%;
+        background-color: rgb(99, 37, 221);
+        width: 14px;
+        height: 14px;
+    }
+
+    .slick-dots {
+        bottom: -50px;
+    }
+
+    #gallery h4 {
+        text-align: center;
     }
     #gallery {
-        padding: 90px 20px 0 20px;
+            padding: 130px 20px 0 20px;
     }
+
     #gallery-container .popup {
         margin: 0 15px 30px 15px;
     }
+
     #gallery-container {
         justify-content: center;
     }
+
+    #gallery-container .popup:last-child {
+        width: 700px;
+        overflow: hidden;
+    }
+
     #booking {
         margin-top: 130px;
         max-width: 900px;
     }
+
     #location {
         padding: 100px 20px 100px 20px;
     }
+
     #location-info {
         width: 300px;
     }
+
     #location-container {
         justify-content: space-around;
     }
+
     #footer {
         padding: 0 20px 55px 20px;
     }
@@ -86,32 +155,87 @@
     #info .vip-rooms {
         width: 460px;
     }
+
     #info .best-tastes {
         width: 460px;
     }
+
     #info .saturday-party {
         width: 490px;
     }
+
     #info {
         padding-bottom: 140px;
         grid-gap: 40px 20px;
 
     }
+
     #info .saturday-party img {
         width: 432px;
     }
-}
 
-/*768-1023*/
-@media screen and (max-width: 1023px) {
-
-    #map iframe {
-        width: 550px;
+    #header-menu {
+        display: none;
     }
-    #our-menu .product-flex {
-        flex-direction: column;
+
+    #burger {
+        display: block;
+    }
+
+    #header-container {
+        position: relative;
+        justify-content: flex-start;
         align-items: center;
     }
+
+    #work-time-container {
+        margin-left: auto;
+        margin-right: 25px;
+    }
+
+    .logo {
+        margin-right: 25px;
+    }
+
+    #header-menu {
+        top: 0;
+        left: 0;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 75px 0;
+        display: none;
+        margin-left: 0;
+    }
+
+    #header-menu a.a {
+        display: block;
+        width: auto;
+        height: 60px;
+    }
+
+    #header-container #cross {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        font-size: 24px;
+        opacity: 0.8;
+    }
+
+    #header-container.menu-open {
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    #header-container.menu-open #header-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
     #main-image #sparks {
         bottom: 290px;
         left: -3px;
@@ -134,33 +258,21 @@
         height: 400px;
     }
 
-    #main-image #smoke-sides {
-        bottom: 145px;
-        left: -33px;
-        width: 257px;
-    }
-
-    #main-image #smoke-center {
-        position: absolute;
-        bottom: 145px;
-        left: 27px;
-        width: 133px;
-    }
-
     #main-image #coals {
-        top: -13px;
-        left: 75px;
+        top: -5px;
+        left: 108px;
     }
 
     #main-image #coals-smoke {
-        top: -27px;
-        left: 78px;
+        top: -23px;
+        left: 108px;
     }
 
     #main-image #coals-shadow {
-        left: 63px;
-
+        top: -34px;
+        left: 97px;
     }
+
     #main-image #coal-smoke {
         bottom: 394px;
         left: 96px;
@@ -168,154 +280,126 @@
     }
 
     #main-image #sale {
-        width: 117px;
-        height: 117px;
-        left: -44px;
-        top: 100px;
+        top: 98px;
+        left: -11px;
+        width: 120px;
     }
 
-    #main-image #sale div {
-        width: 105px;
-        height: 105px;
+    #main-image {
+        margin-right: 0;
     }
 
-    #main-image #sale div span {
-        font-size: 13px;
-        top: 36px;
-        left: 10px;
+    #main-container {
+        justify-content: space-evenly;
     }
-    #main-info h2 {
-        font-size: 32px;
-    }
+
     #main-info {
-        width: 390px;
+        margin-right: 0;
     }
+
+}
+
+@media screen and (max-width: 1074px) {
+    #our-menu .product-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    #our-menu h4 {
+        text-align: center;
+    }
+    #our-menu .category-container {
+        justify-content: center;
+    }
+    #our-menu .product.border {
+        margin-right: 0;
+    }
+    #our-menu .category {
+        margin: 0 19px;
+    }
+}
+/*768-1023*/
+@media screen and (max-width: 1023px) {
+
+    #map iframe {
+        width: 550px;
+    }
+
     #info .best-tastes {
         flex-direction: column-reverse;
         width: 290px;
         height: 367px;
     }
+
     #info .vip-rooms {
         flex-direction: column;
         width: 290px;
         height: 367px;
     }
+
     #info .saturday-party {
         width: 290px;
         height: 367px;
     }
+
     #info .saturday-party-text {
         width: 230px;
         margin-bottom: 16px;
     }
+
     #info .saturday-party img {
         width: 343px;
     }
+
     #info .best-tastes img, #info .vip-rooms img, #info .saturday-party img {
         width: 230px;
         height: 115px;
         object-fit: cover;
     }
+
     #info {
         grid-template-rows: repeat(4, 154px);
     }
+
     #info .and {
         grid-row-start: 3;
         margin-top: 32px;
         margin-left: 20px;
         width: 218px;
     }
+
     #main-container {
         justify-content: space-evenly;
-    }
-    #our-masters {
-        padding-top: 0;
-    }
-    .master img {
-        width: 290px;
-        height: 100%;
-        object-fit: cover;
-    }
-    .master .master-image {
-        width: 290px;
-        height: 350px;
-        margin: 0 auto;
-    }
-    #our-masters .master-info {
-        width: 290px;
-        margin: 9px auto 0 auto;
-    }
-    #our-masters .slick-next, #our-masters .slick-prev {
-        top: 620px;
-    }
-    #our-masters .master {
-        padding: 0;
     }
 }
 
 @media screen and (max-width: 929px) {
-    #header-container .logo {
-        order: 1;
-        margin-right: 340px;
+    #main-info h2 {
+        font-size: 32px;
     }
-    #header-container #header-menu {
-        order: 4;
-        margin: 15px auto;
+
+    #main-info {
+        width: 390px;
     }
-    #header-container #work-time-container {
-        order: 2;
-    }
-    #header-container .phone-container {
-        order: 3;
-    }
-    #header-container {
-        flex-wrap: wrap;
-    }
-    #discounts-container {
-        width: 400px;
-        margin: 0 auto;
-    }
-    .discount-item, .discount-image img, .discount-info {
-        width: 400px;
-    }
-    #discounts-container .slick-next {
-        right: -60px;
-        top: 116px;
-    }
-    #discounts-container .slick-prev {
-        top: 116px;
-        left: -60px;
-    }
-    .slick-dots li {
-        border-width: 1px;
-        border-color: rgb(99, 37, 221);
-        border-style: solid;
-        border-radius: 50%;
-        width: 13px;
-        height: 13px;
-        margin-top: 35px;
-    }
-    #discounts-container .slick-active {
-        border-radius: 50%;
-        background-color: rgb(99, 37, 221);
-        width: 14px;
-        height: 14px;
-    }
-    .slick-dots {
-        bottom: -50px;
-    }
+
     #gallery-container .popup {
-        margin: 0 10px 30px 10px;
+        margin: 0 15px 30px 15px;
     }
+    .popup2 img {
+        height: 330px;
+    }
+
     #booking {
         max-width: 650px;
     }
+
     #booking #form {
         width: 465px;
     }
+
     #map iframe {
         width: 400px;
     }
+
     #location-info {
         width: 280px;
     }
@@ -324,41 +408,48 @@
 
 /*580-767*/
 @media screen and (max-width: 767px) {
-    #header-container .logo {
-        margin-right: 100px;
-    }
     #main-container {
         flex-direction: column;
         align-items: center;
         position: relative;
     }
+
+
+
     #main-info h2 {
         margin: 0 0 500px 0;
     }
+
     #main-info #main-text br {
         display: none;
     }
+
     #main-info {
         text-align: center;
         margin: 0;
     }
+
     #main-image {
         height: 564px;
         position: absolute;
         top: 160px;
-        left: calc(50% - 98px);
+        left: calc(50% - 130px);
     }
+
     #main-image #copy-hookah {
         width: 235px;
     }
+
     #main-container .order-btn {
         margin-bottom: 0;
     }
+
     #info {
         padding: 100px 20px;
         grid-template: 1fr 1fr 1fr / 1fr;
         justify-items: center;
     }
+
     #info .best-tastes {
         grid-row-start: 1;
         grid-column-start: 1;
@@ -367,6 +458,7 @@
         text-align: center;
         align-items: center;
     }
+
     #info .saturday-party {
         grid-row-start: 2;
         grid-column-start: 1;
@@ -375,6 +467,7 @@
         text-align: center;
         align-items: center;
     }
+
     #info .vip-rooms {
         grid-row-start: 3;
         grid-column-start: 1;
@@ -383,202 +476,208 @@
         text-align: center;
         align-items: center;
     }
+
     #info .and {
         display: none;
     }
-    #our-masters #our-masters-text {
-        width: 340px;
-        margin: 18px auto 57px auto;
-    }
-    #our-masters {
-        text-align: center;
-    }
-    .slick-next, .slick-prev {
-        display: none !important;
-    }
-    .slick-dots .slick-active {
-        border-radius: 50%;
-        background-color: rgb(99, 37, 221);
-        width: 14px;
-        height: 14px;
-    }
-    #our-menu {
-        padding-top: 50px;
-        text-align: center;
-    }
-    #our-menu .category {
-        margin: 0 auto;
-    }
-    #our-menu .category-container {
-        justify-content: center;
-    }
-    #our-menu .product-info {
-        text-align: left;
-    }
-    /*.not-border {*/
-    /*    display: none;*/
-    /*}*/
+
     #discounts {
         padding-top: 65px;
         text-align: center;
     }
+
     #discounts-text {
         margin: 18px auto 58px auto;
     }
-    /*#discounts-container .slick-next, #discounts-container .slick-prev {*/
-    /*    display: none;*/
-    /*}*/
+    #gallery .slick-next, #gallery .slick-prev {
+        display: none !important;
+    }
+
     #gallery {
         padding-top: 135px;
         text-align: center;
     }
+
     #gallery .slick-slide img {
         width: 400px;
         height: 200px;
         object-fit: cover;
     }
+
     #gallery .slick-slide {
         width: 400px;
         height: 200px;
     }
+
     .popup {
         width: 400px !important;
     }
+
     #booking {
         background: none;
         height: 375px;
     }
+
     #location {
         padding: 65px 20px 0 20px;
         text-align: center;
     }
+
     #location-info {
         order: 1;
     }
+
     #map {
         order: 2;
     }
+
     #location-container {
         flex-direction: column;
         align-items: center;
     }
+
     .location-info-container {
         margin-bottom: 35px;
     }
+
     #footer #footer-container, #right-block {
         flex-direction: column;
         margin-top: 95px;
     }
+
     #footer-container .logo {
         position: absolute;
         left: calc(50% - 63px);
     }
+
     #footer #footer-container .order-btn {
         margin: 0 0 35px 0;
     }
+
     #rights {
         display: none;
     }
-
-
 }
 
-
-@media screen and (max-width: 550px) {
-    #header-menu, #work-time-container, #header-container .phone-container {
+@media screen and (max-width: 660px) {
+    #header-container #work-time-container, #header-container .phone-container {
         display: none;
-    }
-    #burger {
-        display: block;
-        order: 2;
     }
 
     #header-container {
-        position: relative;
+        justify-content: space-between;
     }
 
-    #header-menu {
-        top: 74px;
-        left: 0;
-        position: fixed;
-        background: rgba(0, 0, 0, 0.8);
-        z-index: 3;
-        width: 100%;
-        text-align: center;
-        padding: 20px 0;
-        display: none;
-    }
-
-    #header-menu a {
+    #work-time-burger, #phone-burger {
         display: block;
-        width: auto;
         height: 60px;
+        opacity: 0.8;
     }
 
-    #header-container.menu-open {
-        background: rgba(0, 0, 0, 0.8);
+    #our-menu {
+        padding: 90px 0 0 0;
+        max-width: 660px;
+    }
+    #hookah-container {
+        padding: 0 15px;
     }
 
-    #header-container.menu-open #header-menu {
-        display: flex;
-        flex-direction: column;
+    #our-menu .category-container {
+        height: 22px;
+        overflow: auto;
+        white-space: nowrap;
+        width: 100%;
     }
+    .product-text {
+        margin-bottom: 17px;
+    }
+
+    #gallery h4 {
+        width: 400px;
+        margin: 0 auto 37px auto;
+    }
+}
+
+@media screen and (max-width: 550px) {
     #our-menu .product.border {
         flex-direction: column;
         width: 290px;
         height: 390px;
     }
+
+    #our-menu .category-container .category:first-child {
+        margin-left: 105px;
+    }
+
     #our-menu .product-photo {
         width: 215px;
         height: 115px;
     }
+
     #our-menu .product-photo img {
         width: 215px;
         height: 115px;
         object-fit: cover;
     }
+
     #our-menu .product-info {
         text-align: center;
     }
+
     #our-menu .product.border {
         padding: 25px 0;
         align-items: center;
     }
-    #our-menu .category {
-        margin: 0 35px 0 0;
+    #our-menu .product-title {
+        margin-bottom: 13px;
     }
-    #our-menu .category-container {
-        overflow: auto;
-        white-space: nowrap;
-        width: 400px;
-    }
-    #our-menu .category-container .category:first-child {
-        margin-left: 150px;
-    }
+
     #our-menu {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     #our-menu .product.border {
         height: unset;
     }
+
     #our-menu .cost {
         margin-bottom: 25px;
     }
+
     #our-menu .product.not-border {
         display: none;
     }
+
     .discount-item, .discount-image img, .discount-info, #gallery .slick-slide img, #discounts-container, #gallery-container {
         width: 290px;
     }
+
     #gallery-container {
         margin: 0 auto;
     }
+
     #gallery-container .popup {
         margin: 0 0 30px 0;
     }
-
+    .master .master-image {
+        width: 290px;
+        height: 290px;
+    }
+    #our-masters .master-info {
+        width: 290px;
+        height: 211px;
+    }
+    #our-masters {
+        max-width: 320px;
+    }
+    #our-masters .master {
+        padding: 0;
+    }
+    #our-masters #our-masters-text {
+        width: 290px;
+    }
 }
 
 /*320-479*/
@@ -586,68 +685,88 @@
     #main-info h2 {
         font-size: 24px;
     }
+
+    #booking #sent-from div {
+        font-size: 18px;
+        width: 290px;
+    }
+
+    #our-menu .category-container .category:first-child {
+        margin-left: 215px;
+    }
+
+    #main-info {
+        width: 320px;
+    }
+
     #main-info #main-text {
         font-size: 14px;
         line-height: 1.429;
         width: 273px;
         margin: 30px auto 40px auto;
     }
+
     #info h3 {
         font-size: 16px;
     }
+
     #info .saturday-party {
         height: 338px;
         display: flex;
         flex-direction: column;
     }
+
     #info .best-tastes, #info .vip-rooms {
         height: 343px;
     }
+
     h4 {
         font-size: 20px;
     }
-    #our-masters #our-masters-text {
-        width: 275px;
-    }
-    #our-masters {
-        padding: 145px 15px 75px 15px;
-    }
+
     #discounts-text {
-        width: 217px;
+        width: 227px;
     }
+
     #discounts, #gallery {
         padding: 90px 15px 0 15px;
     }
+
     #gallery h4 {
         width: 250px;
         margin: 0 auto 37px auto;
     }
+
     #form-title {
         width: 205px;
     }
+
     #booking #form {
         padding: 30px 15px;
     }
+
     #form-container {
         width: 290px;
     }
+
     #reserve-info {
         text-align: center;
     }
+
     #social-media img {
         height: 100%;
     }
+
     #social-media {
         height: 38px;
     }
+
     #map iframe {
         width: 290px;
         height: 360px;
     }
+
     #location {
         padding: 65px 15px 0 15px;
     }
-
-
-
 }

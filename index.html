@@ -7,35 +7,36 @@
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/animate.min.css">
-    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>-->
     <link rel="stylesheet" href="css/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/adaptive.css">
-    <!--    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1"></script>-->
 </head>
 <body>
 
 <div id="main">
     <div id="header-container" class="wow animate__zoomIn">
         <div class="logo">
-            <img src="images/hookah.png" alt="">
-            <div class="logo-text"><span>Smoke City</span><br>hookah bar</div>
+            <img src="images/logo2.png" alt="">
         </div>
+        <div id="burger">&#9776;</div>
         <div id="header-menu">
-            <a href="#info">О нас</a>
-            <a href="#our-menu">Меню</a>
-            <a href="#gallery">Галерея</a>
-            <a href="#location">Контакты</a>
+            <div id="cross">&#10006;</div>
+            <a href="#info" class="a">О нас</a>
+            <a href="#our-menu" class="a">Меню</a>
+            <a href="#gallery" class="a">Галерея</a>
+            <a href="#location" class="a">Контакты</a>
+            <div id="work-time-burger">Режим работы:<br> Пн-Чт с 18 до 00 Пт-Сб с 20 до 5</div>
+            <a href="tel:89005001010" id="phone-burger">Звоните нам:<br> 8 900-500-10-10</a>
         </div>
         <div id="work-time-container">
             <img src="images/clock.png" alt="">
             <div class="work-time">Пн-Чт с 18 до 00 Пт-Сб с 20 до 5</div>
         </div>
-        <div class="phone-container">
+        <a href="tel:89005001010" class="phone-container">
             <img src="images/phone.png" alt="">
             <div class="phone"><span>8 900-500-10-10</span><br>Звоните нам</div>
-        </div>
-        <div id="burger">&#9776;</div>
+        </a>
+
     </div>
     <div id="main-container" class="wow animate__fadeInUp">
         <div id="main-info">
@@ -49,10 +50,7 @@
             </a>
         </div>
         <div id="main-image">
-            <img id="hookah" src="images/main-hookah.png" alt="">
-            <img id="copy-hookah" src="images/copy-hookah.png" alt="">
-            <img id="smoke-sides" src="images/smoke-sides.png" alt="">
-            <img id="smoke-center" src="images/smoke-center.png" alt="">
+            <img id="hookah" src="images/big_hookah.png" alt="">
             <img id="coals" src="images/coals.png" alt="">
             <img id="coals-shadow" src="images/coals-shadow.png" alt="">
             <img id="coals-smoke" src="images/coals-smoke.png" alt="">
@@ -60,11 +58,7 @@
             <img id="coal" src="images/coal.png" alt="">
             <img id="coal-shadow" src="images/coal-shadow.png" alt="">
             <img id="coal-smoke" src="images/coal-smoke.png" alt="">
-            <div id="sale">
-                <div>
-                    <span>Новым гостям<br> 15% скидки !</span>
-                </div>
-            </div>
+            <img id="sale" src="images/promotion.png">
         </div>
     </div>
 </div>
@@ -107,7 +101,7 @@
                 </div>
             </div>
             <div class="image-info">
-            <img src="images/vip-room.png" alt="">
+                <img src="images/vip-room.png" alt="">
             </div>
         </div>
         <div class="and">
@@ -438,7 +432,7 @@
             <a class="popup" href="images/gallery1-1,5x.png">
                 <img src="images/gallery1.png" alt="">
             </a>
-            <a class="popup" href="images/gallery2-1,5x.png">
+            <a class="popup popup2" href="images/gallery2-1,5x.png">
                 <img src="images/gallery2.png" alt="">
             </a>
             <a class="popup" href="images/gallery3-1,5x.png">
@@ -476,7 +470,9 @@
             </div>
         </div>
         <div id="sent-from">
-            Спасибо, мы свяжемся с вами в ближайшее время!
+            <div>
+                Спасибо, мы свяжемся с вами в ближайшее время!
+            </div>
         </div>
     </div>
 
@@ -491,7 +487,7 @@
                         style="color:#eee;font-size:12px;position:absolute;top:14px;">Бар, паб в Москве</a><a
                         href="https://yandex.ru/maps/213/moscow/category/hookah_bar/34866769160/?utm_medium=mapframe&utm_source=maps"
                         style="color:#eee;font-size:12px;position:absolute;top:28px;">Кальян-бар в Москве</a>
-                    <iframe src="https://yandex.ru/map-widget/v1/-/CCU55OAPdC" width="640" height="360" frameborder="1"
+                    <iframe src="https://yandex.ru/map-widget/v1/-/CCU55OAPdC" width="630" height="360" frameborder="1"
                             allowfullscreen="true" style="position:relative;"></iframe>
                 </div>
             </div>
@@ -514,9 +510,15 @@
                 <div class="location-info-container">
                     <div class="location-title">Следите за нами в соц.сетях</div>
                     <div id="social-media">
-                        <img src="images/instagram.png" alt="">
-                        <img src="images/vk.png" alt="">
-                        <img src="images/whatsapp.png" alt="">
+                        <a href="https://www.instagram.com/hs.taganka/">
+                            <img src="images/instagram.png" alt="">
+                        </a>
+                        <a href="https://vk.com/hs.taganka">
+                            <img src="images/vk.png" alt="">
+                        </a>
+                        <a href="https://api.whatsapp.com/send/?phone=79152784717&text&app_absent=0">
+                            <img src="images/whatsapp.png" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -526,16 +528,17 @@
     <div id="footer" class="wow animate__fadeInUp">
         <div id="footer-container">
             <div class="logo">
-                <img src="images/hookah.png" alt="">
-                <div class="logo-text"><span>Smoke City</span><br>hookah bar</div>
+                <img src="images/logo2.png" alt="">
             </div>
             <div id="right-block">
                 <a href="#booking">
                     <button class="order-btn">Забронировать стол</button>
                 </a>
                 <div class="phone-container">
-                    <img src="images/phone.png" alt="">
-                    <div class="phone"><span>8 900-500-10-10</span><br>Звоните нам</div>
+                    <a href="tel:89005001010" class="phone-container">
+                        <img src="images/phone.png" alt="">
+                        <div class="phone"><span>8 900-500-10-10</span><br>Звоните нам</div>
+                    </a>
                 </div>
             </div>
         </div>
